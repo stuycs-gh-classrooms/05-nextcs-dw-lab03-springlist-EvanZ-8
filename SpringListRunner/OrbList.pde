@@ -4,7 +4,7 @@
   Class to represent a Linked List of OrbNodes.
 
   Instance Variables:
-    OrbNode front:
+    OrbNode front:      
       The first element of the list.
       Initially, this will be null.
 
@@ -31,7 +31,7 @@ class OrbList {
   /*===========================
     Contructor
     Does very little.
-    You do not need to modify this method.
+    You do not need to modify this method.  (Ok)
     =========================*/
   OrbList() {
     front = null;
@@ -43,7 +43,7 @@ class OrbList {
     Insert o to the beginning of the list.
     =========================*/
   void addFront(OrbNode o) {
-
+    l.add(o, 1); 
   }//addFront
 
 
@@ -55,10 +55,15 @@ class OrbList {
     using addFront.
     If ordered is true, the orbs should all
     have the same y coordinate and be spaced
-    SPRING_LEGNTH apart horizontally.
+    SPRING_LENGTH apart horizontally.
     =========================*/
   void populate(int n, boolean ordered) {
-
+    clear();
+    addFront(OrbNode o);
+    if (ordered == true) {
+      orb.y+=1;
+      orb.x = orb.x + SPRING_LENGTH;
+    }
   }//populate
 
   /*===========================
@@ -67,8 +72,8 @@ class OrbList {
     Display all the nodes in the list using
     the display method defined in the OrbNode class.
     =========================*/
-  void display() {
-
+  void display(int springLength) {
+    display();
   }//display
 
   /*===========================
@@ -78,6 +83,7 @@ class OrbList {
     element in the list.
     =========================*/
   void applySprings(int springLength, float springK) {
+    applySprings();
 
   }//applySprings
 
@@ -85,7 +91,7 @@ class OrbList {
     applyGravity(Orb other, float gConstant)
 
     Use the getGravity and applyForce methods
-    to apply gravity crrectly.
+    to apply gravity correctly.
     =========================*/
   void applyGravity(Orb other, float gConstant) {
 
